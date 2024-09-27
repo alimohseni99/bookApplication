@@ -21,32 +21,30 @@ function fetchBooks() {
       console.error('Error fetching books:', error);
     });
 }
-document.addEventListener('DOMContentLoaded', () => {
-  function addBook() {
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
-    const year = document.getElementById('year').value;
-    const genre = document.getElementById('genre').value;
+function addBook() {
+  const title = document.getElementById('title').value;
+  const author = document.getElementById('author').value;
+  const year = document.getElementById('year').value;
+  const genre = document.getElementById('genre').value;
 
-    fetch('/api/books', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ title, author, year, genre }),
+  fetch('/api/books', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ title, author, year, genre }),
+  })
+    .then((response) => response.json())
+    .then((book) => {
+      console.log('Book added:', book);
+      fetchBooks();
     })
-      .then((response) => response.json())
-      .then((book) => {
-        console.log('Book added:', book);
-        fetchBooks();
-      })
-      .catch((error) => {
-        console.error('Error adding book:', error);
-      });
-  }
-  const addBtn = document.getElementById('addBookBtn');
-  if (addBtn) {
-    addBtn.addEventListener('click', addBook);
-  }
-});
+    .catch((error) => {
+      console.error('Error adding book:', error);
+    });
+}
+const addBtn = document.getElementById('addBookBtn');
+if (addBtn) {
+  addBtn.addEventListener('click', addBook);
+}
 window.onload = fetchBooks;
