@@ -14,7 +14,7 @@ function fetchBooks() {
           <p>Author: ${book.author}</p>
           <p>Year:c ${book.year}</p>
           <p>Genre: ${book.genre}</p>
-         <button class="deleteBtn" data-id="${book.id}">Delete</button>
+         <i class="material-icons deleteBtn" data-id="${book.id}">delete</i> 
 
         `;
         container.appendChild(bookDiv);
