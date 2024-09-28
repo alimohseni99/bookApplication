@@ -6,6 +6,46 @@ p {
   justify-content: center;
   align-items: center;
 }
+.deleteBtn {
+  display: grid;
+  color: rgb(53, 51, 51);
+  place-self: end;
+  border: none;
+  padding: 10px 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.deleteBtn:hover {
+  background-color: rgb(255, 136, 0);
+  color: rgb(255, 255, 255);
+}
+
+.updateBtn {
+  display: grid;
+  place-self: end;
+  color: rgb(80, 79, 79);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.updateBtn:hover {
+  background-color: rgb(255, 136, 0);
+  color: rgb(255, 255, 255);
+}
+.addBtn {
+  display: grid;
+  place-self: start;
+  color: rgb(80, 79, 79);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.addBtn:hover {
+  background-color: rgb(255, 136, 0);
+  color: rgb(255, 255, 255);
+}
 h1 {
   display: flex;
   color: rgb(0, 0, 0);

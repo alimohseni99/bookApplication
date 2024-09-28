@@ -3,6 +3,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Book Application</title>
   </head>
   <body>
@@ -22,7 +26,6 @@
           <h3>Book Title:</h3>
           <p>Book Author:</p>
           <p>Book Description:</p>
-          <button class="delete">Delete</button>
         </div>
       </div>
       <div class="tools">
@@ -30,16 +33,18 @@
           <h3>Add a new book</h3>
           <input type="text" id="title" placeholder="Book Title" />
           <input type="text" id="author" placeholder="Book Author" />
-          <input type="text" id="year" placeholder="Book Year" />
+          <input type="number" id="year" placeholder="Book Year" />
           <input type="text" id="genre" placeholder="Book Genre" />
-          <button class="add" id="addBookBtn">Add</button>
+          <button class="addBtn" id="addBookBtn">Add</button>
         </div>
         <div class="updateBook">
           <h3>Update a book</h3>
-          <input type="text" placeholder="Book Title" />
-          <input type="text" placeholder="Book Author" />
-          <input type="text" placeholder="Book Author" />
-          <button class="update">Update</button>
+          <input type="number" id="id" placeholder="Book ID" />
+          <input type="text" id="title" placeholder="Book Title" />
+          <input type="text" id="author" placeholder="Book Author" />
+          <input type="number" id="year" placeholder="Book Year" />
+          <input type="teasdxt" id="genre" placeholder="Book Genre" />
+          <button class="updateBtn" id="updateBookBtn">Update</button>
         </div>
       </div>
     </main>

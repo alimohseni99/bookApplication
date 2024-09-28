@@ -59,4 +59,11 @@ app.patch('/api/books/:id', (req, res) => {
   res.json(book);
 });
 
+app.delete('/api/books/:id', (req, res) => {
+  const { id } = req.params;
+  const bookIndex = db.books.findIndex((book) => book.id === parseInt(id));
+  const deletedBook = db.books.splice(bookIndex, 1);
+  res.json(deletedBook);
+});
+
 module.exports = { app };
