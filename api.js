@@ -44,19 +44,6 @@ app.patch('/api/books/:id', (req, res) => {
   const { id } = req.params;
   const { title, author, year, genre } = req.body;
   const book = db.books.find((book) => book.id === parseInt(id));
-  if (title) {
-    book.title = title;
-  }
-  if (author) {
-    book.author = author;
-  }
-  if (year) {
-    book.year = year;
-  }
-  if (genre) {
-    book.genre = genre;
-  }
-  res.json(book);
 });
 
 app.delete('/api/books/:id', (req, res) => {
