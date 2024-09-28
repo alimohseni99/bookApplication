@@ -70,9 +70,9 @@ const books = [
     genre: 'Philosophical',
   },
   {
-    id: 9,
-    title: 'The Odyssey',
-    author: 'Homer',
+    id: 11,
+    title: 'The idk book',
+    author: 'homer simson',
     year: '8th century BC',
     genre: 'Epic',
   },
