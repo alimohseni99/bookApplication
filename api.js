@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const app = express();
 const db = require('./db');
 
@@ -20,7 +21,23 @@ app.post('/api/books/', (req, res) => {
     genre,
   };
   db.books.push(newBook);
-  res.status(201).json(newBook);
+
+  const updatedDbContent = `
+const books = ${JSON.stringify(db.books, null, 2)};
+
+module.exports = { books };
+  `;
+
+  fs.writeFile(path.join(__dirname, 'db.js'), updatedDbContent, (err) => {
+    if (err) {
+      console.error('Error writing to db.js:', err);
+      return res
+        .status(500)
+        .json({ error: 'Failed to save the book to the database' });
+    }
+
+    res.status(201).json(newBook);
+  });
 });
 
 app.patch('/api/books/:id', (req, res) => {
