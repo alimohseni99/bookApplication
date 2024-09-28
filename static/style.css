@@ -21,6 +21,8 @@ p {
   gap: 1rem;
   background-color: rgb(111, 112, 111);
   padding: 1rem;
+  font-weight: 100;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .books:last-child:nth-child(3n + 1) {
   grid-column: span 3;

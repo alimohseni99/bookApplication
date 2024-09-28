@@ -10,9 +10,9 @@ function fetchBooks() {
         bookDiv.classList.add('books');
         bookDiv.innerHTML = `
           <h3>${book.title}</h3>
-          <p><strong>Author:</strong> ${book.author}</p>
-          <p><strong>Year:</strong> ${book.year}</p>
-          <p><strong>Genre:</strong> ${book.genre}</p>
+          <p>Author: ${book.author}</p>
+          <p>Year:c ${book.year}</p>
+          <p>Genre: ${book.genre}</p>
         `;
         container.appendChild(bookDiv);
       });
@@ -37,9 +37,11 @@ function addBook() {
     .then((response) => response.json())
     .then((book) => {
       console.log('Book added:', book);
+      alert('Book added successfully!');
       fetchBooks();
     })
     .catch((error) => {
+      alert('Error adding book:', error);
       console.error('Error adding book:', error);
     });
 }
