@@ -72,7 +72,7 @@ app.delete('/api/books/:id', (req, res) => {
   const books = ${JSON.stringify(db.books, null, 2)};
   module.exports = { books };
   `;
-  fs.write(path.join(__dirname, 'db.js'), updatedDbContent, (err) => {
+  fs.writeFile(path.join(__dirname, 'db.js'), updatedDbContent, (err) => {
     if (err) {
       console.error('Error writing to db.js:', err);
       return res

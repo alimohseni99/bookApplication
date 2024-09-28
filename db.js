@@ -1,5 +1,5 @@
 
-const books = [
+  const books = [
   {
     "id": 1,
     "title": "The Great Gatsby",
@@ -83,15 +83,7 @@ const books = [
     "author": "test",
     "year": "1999",
     "genre": "asdasdasd"
-  },
-  {
-    "id": 13,
-    "title": "rwear",
-    "author": "rwa",
-    "year": "asddas",
-    "genre": "asdasd"
   }
 ];
-
-module.exports = { books };
+  module.exports = { books };
   
